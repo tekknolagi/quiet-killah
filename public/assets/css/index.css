@@ -20,8 +20,15 @@ html {
 }
 
 .main-content {
+	width: 100%;
 	margin-left: 7%;
-	margin-top: 4%;
+	margin-top: 1%;
+}
+
+.best-worst-ticker {
+	margin-left: 339px;
+	font-weight: lighter;
+	font-size: 24;
 }
 
 #text-input {
@@ -53,6 +60,22 @@ html {
 
 .rank {
 	color: #32AAB8;
+}
+
+.rank-best {
+	color: #2BCC5B;
+}
+
+.class-best {
+
+}
+
+.rank-worst {
+	color: #CC2B2E;
+}
+
+.class-worst {
+
 }
 
 .tt-hint {

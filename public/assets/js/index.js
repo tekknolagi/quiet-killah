@@ -8,22 +8,15 @@ function spazBg(color) {
 	$("body").css({'background-color':color});
 	setTimeout(function() {
 		$("body").css({'background-color':'white'});
-	}, 215);
+	}, 175);
 }
 
 $(document).ready(function() {
-	// $('.typehead').on('typeahead:selected', function() {
-	// 	$("#text-input").val('');
-	// });
-
-	// $('.typehead').on('typeahead:autocompleted', function() {
-	// 	$("#text-input").val('');
-	// });
-
 	var callNums = [];
 	var classRanks = {}
 	var alreadyAdded = {};
 
+	// Get the list of all callnums
 	$.ajax({
 		type: "GET",
 		url: "/api/ranks",
@@ -31,6 +24,26 @@ $(document).ready(function() {
 			$.each(data.classes, function (id, el) {
 				callNums.push(id);
 				classRanks[id] = el;
+			});
+		}
+	});
+
+	// Get the best possible class
+	var best;
+	$.ajax({
+		type: "GET",
+		url: "/api/best",
+		success: function (data) {
+			console.log(data);
+			best = '<span class="rank rank-best">'+data.rank+'</span>  <span class="class-best">'+data.class+'</span>';
+
+			// Now get the worst class
+			$.ajax({
+				type: "GET",
+				url: "/api/worst",
+				success: function (data) {
+					$(".best-worst-ticker").prepend(best + "&nbsp;&nbsp;|&nbsp;&nbsp;" + '<span class="rank rank-worst">'+data.rank+'</span>   <span class="class-worst">'+data.class+'</span>');
+				}
 			});
 		}
 	});

@@ -19,6 +19,10 @@ class ClassRanker
       { :class => klass[0], :rank => klass[1] }
     end
 
+    get '/ranks' do
+      { :classes => $classes }
+    end
+
     params do
       requires :call_num, :type => String
     end

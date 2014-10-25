@@ -6,7 +6,7 @@ class ClassRanker
     format :json
 
     get '/worst' do
-      $classes.max_by do |klass|
+      klass = $classes.max_by do |klass|
         klass[1]
       end
       { :class => klass[0], :rank => klass[1] }

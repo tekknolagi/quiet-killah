@@ -47,6 +47,12 @@ def hours_per_week sched
   daytimes = sched.select do |day, time|
     time != ""
   end
+
+  # experimental college
+  if daytimes.length == 0
+    return 0
+  end
+
   daytimes.map do |day, time|
     start = time.split('-')[0].split(':')[0].to_i
     fin = time.split('-')[1].split(':')[0].to_i
@@ -60,8 +66,7 @@ def hours_per_week sched
 end
 
 def rank_hours_per_week klass
-  $a = hours_per_week(klass['schedule']) - 3
-  pry
+  hours_per_week(klass['schedule'])
 end
 
 def num_requirements reqs

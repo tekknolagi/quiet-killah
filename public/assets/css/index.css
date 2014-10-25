@@ -1,3 +1,9 @@
+html {
+	min-width: 930px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+}
+
 .title {
 	font-size: 175;
 	letter-spacing: -15;
@@ -15,16 +21,17 @@
 
 .main-content {
 	margin-left: 7%;
-	margin-top: 50px;
+	margin-top: 4%;
 }
 
 #text-input {
 	font-size: 55;
+	margin-top: -60px;
 }
 
 #submit_btn {
 	font-size: 55;
-	letter-spacing: -5;
+	letter-spacing: -2;
 	background-color: #04373D;
 	color: white;
 	width: 120;
@@ -41,9 +48,26 @@
 #text-input {
 	color: #04373D;
 	letter-spacing: -1;
+	text-transform: lighter;
 }
 
 .rank {
 	color: #32AAB8;
+}
 
+.tt-hint {
+	font-size: 55;
+	margin-top: -60px;
+	color: grey;
+	letter-spacing: -1;
+}
+
+.tt-dropdown-menu {
+	font-size: 50;
+	max-height: 300px;
+	overflow-y: scroll;
+	width: 100%;
+	background-color: white;
+	opacity: .95;
+	border: 1px solid #333;
 }

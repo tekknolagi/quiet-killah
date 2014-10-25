@@ -13,7 +13,7 @@ class ClassRanker
         klass = $classes[call_num]
 
         if not klass
-          { :error => 'No such class.' }
+          error!({ :error => 'No such class.' }, 400)
         else
           { :rank => klass }
         end

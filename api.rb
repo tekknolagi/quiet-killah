@@ -7,14 +7,14 @@ class ClassRanker
 
     get '/worst' do
       { :class => $classes.max_by do |klass|
-        klass[1]
-        end }
+          klass[1]
+        end[0] }
     end
 
     get '/best' do
       { :class => $classes.min_by do |klass|
-        klass[1]
-        end }
+          klass[1]
+        end[0] }
     end
 
     params do

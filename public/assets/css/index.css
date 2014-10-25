@@ -1,0 +1,49 @@
+.title {
+	font-size: 175;
+	letter-spacing: -15;
+	margin-left: 5%;
+	padding-top: 5%;
+	color: #04373D;
+}
+
+.subtitle {
+	margin-left: 10%;
+	margin-top: -33px;
+	letter-spacing: -1.2;
+	color: #04373D;
+}
+
+.main-content {
+	margin-left: 7%;
+	margin-top: 50px;
+}
+
+#text-input {
+	font-size: 55;
+}
+
+#submit_btn {
+	font-size: 55;
+	letter-spacing: -5;
+	background-color: #04373D;
+	color: white;
+	width: 120;
+}
+
+.class-collection {
+	margin-left: 10%;
+	height: 100;
+	overflow-y: scroll;
+	font-size: 25;
+	color: #04373D;
+}
+
+#text-input {
+	color: #04373D;
+	letter-spacing: -1;
+}
+
+.rank {
+	color: #32AAB8;
+
+}

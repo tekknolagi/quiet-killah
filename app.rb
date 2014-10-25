@@ -5,5 +5,9 @@ class ClassRanker
     get '/' do
       erb :index
     end
+
+    get '/about' do
+      erb :about
+    end
   end # Web
 end # ClassRanker

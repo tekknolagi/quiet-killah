@@ -25,10 +25,15 @@ html {
 	margin-top: 1%;
 }
 
+#form {
+    width: 720px;
+}
+
 .best-worst-ticker {
-	margin-left: 339px;
 	font-weight: lighter;
 	font-size: 24;
+	width: 720px;
+	text-align: right;
 }
 
 #text-input {
